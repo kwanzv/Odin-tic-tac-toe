@@ -16,6 +16,8 @@
   width: 100px;
   border: 3px black solid;
   gap: 0;
+  font-size: 4rem;
+  text-align: center;
 }
 
 body {
@@ -27,4 +29,11 @@ body {
   height: 100vh;
   margin: 0;
   gap: 2rem;
+}
+
+.game-info {
+  padding-top: 2rem;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
 }
