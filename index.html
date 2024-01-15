@@ -11,10 +11,16 @@
     <section class="game">
       <section class="game-board"></section>
       <section class="game-info">
-        <p class="playerX">Player: X</p>
-        <p class="playerO">Player: O</p>
+        <div class="player-wrapper">
+          <p class="playerX"><span class="player-name">Player:</span> X</p>
+          <label id="name">Name:</label><input type="text" id="name" />
+        </div>
+        <div class="player-wrapper">
+          <p class="playerO">Computer: O</p>
+        </div>
       </section>
+      <button id="start-game">Start Game</button>
     </section>
-    <script src="script.js"></script>
+    <script type="module" src="script.mjs"></script>
   </body>
 </html>
