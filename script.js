@@ -88,8 +88,9 @@ function Game() {
   });
 }
 
-// const playerName = document.querySelector(".player-name");
-// const name = document.querySelector("#name");
+const playerName = document.querySelector(".player-name");
+const userName = document.querySelector("input#name");
+console.log(userName);
 
 const beginGame = document
   .querySelector("#start-game")
@@ -102,6 +103,17 @@ const beginGame = document
       timeout: 5000,
     });
     createGameBoard.gameBoard.style.background = "#f0f0f0";
-    console.log("I'm trying");
-    Game();
+    if (userName.value === "") {
+      Snackbar.show({
+        backgroundColor: 323232,
+        text: "Enter your name",
+        actionText: "OK",
+        pos: "bottom-right",
+        timeout: 5000,
+      });
+    } else {
+      Game();
+      playerName.innerHTML = userName.value;
+      userName.value = "";
+    }
   });
