@@ -71,7 +71,13 @@ function Game() {
         squares[a].innerHTML === squares[b].innerHTML &&
         squares[a].innerHTML === squares[c].innerHTML
       ) {
-        console.log("Winner is: " + squares[a].innerHTML);
+        Snackbar.show({
+          backgroundColor: 323232,
+          text: `Winner is: ${squares[a].innerHTML} `,
+          actionText: "OK",
+          pos: "bottom-left",
+          timeout: 5000,
+        });
         return stopGame();
       }
     }
@@ -88,6 +94,13 @@ function Game() {
 const beginGame = document
   .querySelector("#start-game")
   .addEventListener("click", () => {
+    Snackbar.show({
+      backgroundColor: 323232,
+      text: "Game Started",
+      actionText: "OK",
+      pos: "bottom-left",
+      timeout: 5000,
+    });
     createGameBoard.gameBoard.style.background = "#f0f0f0";
     console.log("I'm trying");
     Game();

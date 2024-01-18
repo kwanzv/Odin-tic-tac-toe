@@ -1,5 +1,5 @@
 {
   "dependencies": {
-    "snackbar": "^1.1.0"
+    "node-snackbar": "^0.1.16"
   }
 }
